@@ -13,7 +13,7 @@ import android.support.annotation.NonNull;
         onDelete = ForeignKey.CASCADE
     )
 )
-public class Achivements {
+public class Achievements {
 
   @ColumnInfo(name = "achievements_id")
   @PrimaryKey(autoGenerate = true)
