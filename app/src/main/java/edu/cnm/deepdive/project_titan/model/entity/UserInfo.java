@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.project_titan.entity;
+package edu.cnm.deepdive.project_titan.model.entity;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
