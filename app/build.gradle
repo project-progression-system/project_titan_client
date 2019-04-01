@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "edu.cnm.deepdive.foodrandom"
+        applicationId "edu.cnm.deepdive.project_titan_client"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
