@@ -3,6 +3,8 @@ package edu.cnm.deepdive.project_titan;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import edu.cnm.deepdive.project_titan.fragments.Fragment1;
+import edu.cnm.deepdive.project_titan.fragments.Fragment2;
+import edu.cnm.deepdive.project_titan.fragments.Fragment3;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -74,29 +79,37 @@ public class MainActivity extends AppCompatActivity
     return super.onOptionsItemSelected(item);
   }
 
-  @SuppressWarnings("StatementWithEmptyBody")
   @Override
   public boolean onNavigationItemSelected(MenuItem item) {
-    // Handle navigation view item clicks here.
-    int id = item.getItemId();
-
-    if (id == R.id.nav_camera) {
-      // Handle the camera action
-    } else if (id == R.id.nav_gallery) {
-
-    } else if (id == R.id.nav_slideshow) {
-
-    } else if (id == R.id.nav_manage) {
-
-    } else if (id == R.id.nav_share) {
-
-    } else if (id == R.id.nav_send) {
-
+    Bundle args = new Bundle();
+    switch (item.getItemId()) {
+      case R.id.fragment_1:
+        loadFragment(new Fragment1(), R.id.fragment_container, "fragment1",
+            null);// this refers to the method at the very bottom
+        break;
+      case R.id.fragment_2:
+        loadFragment(new Fragment2(), R.id.fragment_container, "fragment2",
+            null);// this refers to the method at the very bottom
+        break;
+      case R.id.fragment_3:
+        loadFragment(new Fragment3(), R.id.fragment_container, "fragment3",
+            null);// this refers to the method at the very bottom
+        break;
     }
 
-    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+    DrawerLayout drawer = findViewById(R.id.drawer_layout);
     drawer.closeDrawer(GravityCompat.START);
     return true;
   }
-}
 
+  public void loadFragment(Fragment fragment, int container, String tag, Bundle args) {
+    FragmentManager manager = getSupportFragmentManager();
+    if (args != null) {
+      fragment.setArguments(args);
+    }
+    manager.beginTransaction()
+        .add(container, fragment, tag)
+        .commit(); // tag can be specified null and then it will be
+  }
+
+}
