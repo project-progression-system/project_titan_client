@@ -11,14 +11,10 @@ public class TitanApplication extends Application {
   public void onCreate() {
     super.onCreate();
     instance = this;
-    Stetho.initializeWithDefaults(this); // Comment out this line to disable Stetho.
+    Stetho.initializeWithDefaults(this);
   }
 
-  /**
-   * Returns this instance, for access to application context across the app.
-   *
-   * @return singleton instance.
-   */
+
   public static TitanApplication getInstance() {
     return instance;
   }

@@ -1,12 +1,12 @@
 package edu.cnm.deepdive.project_titan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,9 +14,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import edu.cnm.deepdive.project_titan.controller.LoginActivity;
 import edu.cnm.deepdive.project_titan.fragments.Fragment1;
 import edu.cnm.deepdive.project_titan.fragments.Fragment2;
 import edu.cnm.deepdive.project_titan.fragments.Fragment3;
+import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -112,4 +115,13 @@ public class MainActivity extends AppCompatActivity
         .commit(); // tag can be specified null and then it will be
   }
 
+  private void signOut() {
+    GoogleSignInService.getInstance().getClient().signOut()
+        .addOnCompleteListener(this, (task -> {
+          GoogleSignInService.getInstance().setAccount(null);
+          Intent intent = new Intent(this, LoginActivity.class);
+          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+          startActivity(intent);
+        }));
+  }
 }
