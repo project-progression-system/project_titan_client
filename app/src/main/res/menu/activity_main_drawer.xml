@@ -6,18 +6,19 @@
   <group android:checkableBehavior="single">
     <item
       android:id="@+id/fragment_1"
-      android:icon="@drawable/ic_menu_camera"
-      android:title="Fragment1"/>
+      android:icon="@drawable/ic_assessment"
+      android:title="Achievements"/>
+
     <item
       android:id="@+id/fragment_2"
-      android:icon="@drawable/ic_menu_gallery"
-      android:title="Fragment2"/>
+      android:icon="@drawable/ic_menu_camera"
+      android:title="AR Model"/>
 
     <item
       android:id="@+id/fragment_3"
-      android:icon="@drawable/ic_menu_gallery"
-      android:title="Fragment2"/>
-
+      android:icon="@drawable/ic_menu_manage"
+      android:title="Fragment1"/>
+    
   </group>
 
 </menu>
