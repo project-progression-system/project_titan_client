@@ -23,7 +23,6 @@ public class GoogleSignInService {
   }
 
 
-
   public static GoogleSignInService getInstance() {
     return InstanceHolder.INSTANCE;
   }
