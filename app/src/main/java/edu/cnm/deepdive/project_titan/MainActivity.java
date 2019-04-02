@@ -13,7 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
-import edu.cnm.deepdive.project_titan.fragments.Fragment1;
+import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
 import edu.cnm.deepdive.project_titan.fragments.Fragment2;
 import edu.cnm.deepdive.project_titan.fragments.Fragment3;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
@@ -63,15 +63,15 @@ public class MainActivity extends AppCompatActivity
     int id = item.getItemId();
 
     //noinspection SimplifiableIfStatement
-    if (id == R.id.action_settings) {
-
-      return true;
-    }
+//    if (id == R.id.action_settings) {
+//
+//      return true;
+//    }
     boolean handled = true;
     switch (item.getItemId()) {
-      case R.id.action_settings:
-        getActionBar();
-        break;
+//      case R.id.action_settings:
+//        getActionBar();
+//        break;
       case R.id.sign_out:
         signOut();
         break;
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
     Bundle args = new Bundle();
     switch (item.getItemId()) {
       case R.id.fragment_1:
-        loadFragment(new Fragment1(), R.id.fragment_container, "fragment1",
+        loadFragment(new AchievementsFragment(), R.id.fragment_container, "fragment1",
             null);// this refers to the method at the very bottom
         break;
       case R.id.fragment_2:
@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity
     }
     manager.beginTransaction()
         .add(container, fragment, tag)
+        .addToBackStack(fragment.getClass().getSimpleName())
         .commit(); // tag can be specified null and then it will be
   }
 
