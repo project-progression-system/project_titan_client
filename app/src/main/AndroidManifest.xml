@@ -22,7 +22,7 @@
 
     </activity>
     <activity
-      android:label="@string/title_activity_login"
+      android:label="@string/project_titan"
       android:name=".controller.LoginActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
