@@ -76,10 +76,22 @@ public class MainActivity extends AppCompatActivity
 
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings) {
+
       return true;
     }
-
-    return super.onOptionsItemSelected(item);
+    boolean handled = true;
+    switch (item.getItemId()) {
+      case R.id.action_settings:
+        getActionBar();
+        break;
+      case R.id.sign_out:
+        signOut();
+        break;
+      default:
+        handled = super.onOptionsItemSelected(item);
+    }
+    return handled;
+//    return super.onOptionsItemSelected(item);
   }
 
   @Override
@@ -114,21 +126,7 @@ public class MainActivity extends AppCompatActivity
         .add(container, fragment, tag)
         .commit(); // tag can be specified null and then it will be
   }
-//  @Override
-//  public boolean onOptionsItemSelected(MenuItem item) {
-//    boolean handled = true;
-//    switch (item.getItemId()) {
-//      case R.id.action_settings:
-//        getActionBar();
-//        break;
-//      case R.id.sign_out:
-//        signOut();
-//        break;
-//      default:
-//        handled = super.onOptionsItemSelected(item);
-//    }
-//    return handled;
-//  }
+
 
   private void signOut() {
     GoogleSignInService.getInstance().getClient().signOut()
