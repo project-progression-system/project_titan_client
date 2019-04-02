@@ -4,7 +4,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="#800000"
-  tools:context="edu.cnm.deepdive.project_titan.fragments.Fragment1">
+  tools:context="edu.cnm.deepdive.project_titan.fragments.AchievementsFragment">
 
   <!-- TODO: Update blank fragment layout -->
   <TextView

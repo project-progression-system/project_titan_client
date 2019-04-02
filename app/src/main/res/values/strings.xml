@@ -31,4 +31,6 @@
   <string name="sign_in_sub">Sign In Welcome</string>
   <string name="login_failure_message">Unable to sign in with provided credentials</string>
   <string name="sign_out">Sign out</string>
+
+  <string name="base_url"></string> <!-- TODO put a url to make a request from server  -->
 </resources>
