@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
-  <!--<item-->
-    <!--android:id="@+id/action_settings"-->
-    <!--android:orderInCategory="100"-->
-    <!--android:title="@string/action_settings"-->
-    <!--app:showAsAction="never"/>-->
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".activities.BaseActivity">
 
   <item
-    android:id="@+id/sign_out"
-    android:orderInCategory="100"
-    android:title="@string/sign_out"
-    app:showAsAction="never"/>
+    android:id="@+id/action_notification1"
+    android:icon="@drawable/ic_more_vert"
+    android:title="@string/action_notification"
+    app:showAsAction="ifRoom">
+
+    <menu>
+      <item
+        android:id="@+id/sign_out"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_exit_to_app"
+        android:title="@string/sign_out"
+        app:showAsAction="never"/>
+    </menu>
+  </item>
 </menu>
