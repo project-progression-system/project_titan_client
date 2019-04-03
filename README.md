@@ -19,7 +19,8 @@
 * Galaxy Note 10
 * LGE LG_Q710AL (Android 8.1.0 API 27) LG Stylo 4
 
-### Third Party Libraries ###
+# Third Party Libraries
+### Libraries
  + [Google Gson](https://github.com/google/gson)
  + [Retrofit 2](https://square.github.io/retrofit/)
  + [Facebook Stetho](https://github.com/facebook/stetho)
