@@ -2,6 +2,7 @@ package edu.cnm.deepdive.project_titan;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
 import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
 import edu.cnm.deepdive.project_titan.fragments.Fragment2;
@@ -20,6 +25,12 @@ import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
+
+  ProgressBar progressBar;
+  private int i = 0;
+  private TextView progressTextView;
+  private Handler handler = new Handler();
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +47,38 @@ public class MainActivity extends AppCompatActivity
 
     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
     navigationView.setNavigationItemSelectedListener(this);
+
+    progressBar = (ProgressBar) findViewById(R.id.determinateBar);
+    progressTextView = (TextView) findViewById(R.id.progressTextView);
+    Button button = (Button) findViewById(R.id.btnShow);
+    button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        i = progressBar.getProgress();
+        new Thread(new Runnable() {
+          public void run() {
+            while (i < 100) {
+              i += 1;
+              // Update the progress bar and display the current value in text view
+              handler.post(new Runnable() {
+                public void run() {
+                  progressBar.setProgress(i);
+                  progressTextView.setText(i + "/" + progressBar.getMax());
+                }
+              });
+              try {
+                // Sleep for 100 milliseconds to show the progress slowly.
+                Thread.sleep(100);
+              } catch (InterruptedException e) {
+                e.printStackTrace();
+              }
+            }
+          }
+        }).start();
+      }
+    });
   }
+
 
   @Override
   public void onBackPressed() {
