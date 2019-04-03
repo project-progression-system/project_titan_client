@@ -43,7 +43,7 @@
  + [Javadoc]() do something with this
 
 
-#Copyrights and Licenses
+# Copyrights and Licenses
 Copyright 2019 Lance Zotigh, Alex Rauenzahn, Thomas Herrera & Deep Dive Coding
 Licensed under the Apache License, Version 2.0 (the “License”); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
