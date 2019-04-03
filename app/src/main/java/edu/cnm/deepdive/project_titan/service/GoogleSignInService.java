@@ -4,6 +4,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.TitanApplication;
 
 
@@ -18,6 +19,7 @@ public class GoogleSignInService {
         new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()
             .requestId()
+            .requestIdToken(TitanApplication.getInstance().getString(R.string.client_id))
             .build();
     client = GoogleSignIn.getClient(TitanApplication.getInstance(), options);
   }
