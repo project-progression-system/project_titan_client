@@ -20,5 +20,5 @@
 * [Deep Dive Android Utilities](https://github.com/deep-dive-coding-java/android-utilities/blob/master/README.md)
 
 
-[User Stories]()
-[WireFrames](TeamCapstoneProjectWireFrame.pdf)
+* [User Stories]()
+* [WireFrames](TeamCapstoneProjectWireFrame.pdf)
