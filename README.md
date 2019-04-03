@@ -35,8 +35,12 @@
 *
 
 # Design & technical documentation
-+ [User Stories]() do something with this
-+ [WireFrames](TeamCapstoneProjectWireFrame.pdf)
+ + [WireFrames](TeamCapstoneProjectWireFrame.pdf)
+ + [User Stories]() do something with this
+ + [ERD]() do something with this
+ + [DDL]() do something with this
+ + [Javadoc]() do something with this
+
 
 #Copyrights and Licenses
 Copyright 2019 Lance Zotigh, Alex Rauenzahn, Thomas Herrera & Deep Dive Coding
