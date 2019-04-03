@@ -32,5 +32,6 @@
   <string name="login_failure_message">Unable to sign in with provided credentials</string>
   <string name="sign_out">Sign out</string>
 
-  <string name="base_url"></string> <!-- TODO put a url to make a request from server  -->
+  <string name="base_url"></string>
+  <string name="action_notification">action_notification</string> <!-- TODO put a url to make a request from server  -->
 </resources>

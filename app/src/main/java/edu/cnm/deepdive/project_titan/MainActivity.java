@@ -81,9 +81,6 @@ public class MainActivity extends AppCompatActivity
 //    }
     boolean handled = true;
     switch (item.getItemId()) {
-//      case R.id.action_settings:
-//        getActionBar();
-//        break;
       case R.id.sign_out:
         signOut();
         break;
