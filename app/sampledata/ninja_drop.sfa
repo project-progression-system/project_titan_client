@@ -1,0 +1,77 @@
+{
+  animations: [
+    {
+      path: 'sampledata/ninja_drop.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'ninja_drop',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: 'sm_ninja_drop_lambert1_BaseColor',
+        },
+        {
+          normalMap: 'sm_ninja_drop_lambert1_Normal',
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/ninja_drop.fbx',
+    name: 'ninja_drop',
+    recenter: 'root',
+    scale: 10,
+  },
+  samplers: [
+    {
+      file: 'sampledata/ninja_drop.fbm/sm_ninja_drop_lambert1_BaseColor.png',
+      name: 'sm_ninja_drop_lambert1_BaseColor',
+      pipeline_name: 'ninja_drop.fbm/sm_ninja_drop_lambert1_BaseColor.png',
+    },
+    {
+      file: 'sampledata/ninja_drop.fbm/sm_ninja_drop_lambert1_Normal.png',
+      name: 'sm_ninja_drop_lambert1_Normal',
+      params: {
+        usage_type: 'Normal',
+      },
+      pipeline_name: 'ninja_drop.fbm/sm_ninja_drop_lambert1_Normal.png',
+    },
+  ],
+  version: '0.54:2',
+}
