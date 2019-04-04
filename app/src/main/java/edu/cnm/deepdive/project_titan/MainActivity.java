@@ -14,7 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
 import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
-import edu.cnm.deepdive.project_titan.fragments.Fragment2;
+import edu.cnm.deepdive.project_titan.fragments.ARFragment;
 import edu.cnm.deepdive.project_titan.fragments.Fragment3;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity
             null);// this refers to the method at the very bottom
         break;
       case R.id.fragment_2:
-        loadFragment(new Fragment2(), R.id.fragment_container, "fragment2",
+        loadFragment(new ARFragment(), R.id.fragment_container, "fragment2",
             null);// this refers to the method at the very bottom
         break;
       case R.id.fragment_3:
