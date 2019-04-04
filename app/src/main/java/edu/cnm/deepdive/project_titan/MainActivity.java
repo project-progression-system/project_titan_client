@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
 import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
 import edu.cnm.deepdive.project_titan.fragments.Fragment2;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity
 
     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
     navigationView.setNavigationItemSelectedListener(this);
+
+
+    ImageView imgView = (ImageView) findViewById(R.id.image);
+    imgView.setImageResource(R.drawable.ninja_drop);
   }
 
   @Override
