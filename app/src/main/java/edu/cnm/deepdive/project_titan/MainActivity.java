@@ -12,10 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
 import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
-import edu.cnm.deepdive.project_titan.fragments.ARFragment;
+import edu.cnm.deepdive.project_titan.fragments.NinjaFragment;
 import edu.cnm.deepdive.project_titan.fragments.Fragment3;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
@@ -38,9 +37,9 @@ public class MainActivity extends AppCompatActivity
     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
     navigationView.setNavigationItemSelectedListener(this);
 
-
-    ImageView imgView = (ImageView) findViewById(R.id.image);
-    imgView.setImageResource(R.drawable.ninja_drop);
+//
+//    ImageView imgView = (ImageView) findViewById(R.id.image);
+//    imgView.setImageResource(R.drawable.ninja_drop);
   }
 
   @Override
@@ -87,17 +86,21 @@ public class MainActivity extends AppCompatActivity
   @Override
   public boolean onNavigationItemSelected(MenuItem item) {
     Bundle args = new Bundle();
+    Fragment fragment = null;
     switch (item.getItemId()) {
       case R.id.fragment_1:
-        loadFragment(new AchievementsFragment(), R.id.fragment_container, "fragment1",
+        fragment = new AchievementsFragment();
+        loadFragment(fragment, R.id.fragment_container, fragment.getClass().getSimpleName(),
             null);// this refers to the method at the very bottom
         break;
       case R.id.fragment_2:
-        loadFragment(new ARFragment(), R.id.fragment_container, "fragment2",
+        fragment = new NinjaFragment();
+        loadFragment(fragment, R.id.fragment_container, fragment.getClass().getSimpleName(),
             null);// this refers to the method at the very bottom
         break;
       case R.id.fragment_3:
-        loadFragment(new Fragment3(), R.id.fragment_container, "fragment3",
+        fragment = new Fragment3();
+        loadFragment(fragment, R.id.fragment_container, fragment.getClass().getSimpleName(),
             null);// this refers to the method at the very bottom
         break;
     }
@@ -113,9 +116,9 @@ public class MainActivity extends AppCompatActivity
       fragment.setArguments(args);
     }
     manager.beginTransaction()
-        .add(container, fragment, tag)
-        .addToBackStack(fragment.getClass().getSimpleName())
-        .commit(); // tag can be specified null and then it will be
+        .replace(container, fragment, tag)
+//        .addToBackStack(fragment.getClass().getSimpleName())
+        .commitNow(); // tag can be specified null and then it will be
   }
 
 

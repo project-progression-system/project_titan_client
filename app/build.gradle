@@ -45,6 +45,7 @@ dependencies {
     implementation 'com.google.ar:core:1.8.0'
     implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.8.0'
     implementation 'com.google.ar.sceneform:core:1.8.0'
+    api "com.google.ar.sceneform:core:1.8.0"
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
@@ -76,7 +77,8 @@ dependencies {
 apply plugin: 'com.google.ar.sceneform.plugin'
 
 
+
 sceneform.asset('sampledata/ninja_drop.fbx',
         'default',
         'sampledata/ninja_drop.sfa',
-        'src/main/assets/ninja_drop')
+        'src/main/res/raw/ninja_drop')
