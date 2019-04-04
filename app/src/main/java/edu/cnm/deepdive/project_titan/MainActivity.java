@@ -2,7 +2,6 @@ package edu.cnm.deepdive.project_titan;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,10 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
 import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
 import edu.cnm.deepdive.project_titan.fragments.Fragment2;
@@ -77,8 +72,11 @@ public class MainActivity extends AppCompatActivity
         }).start();
       }
     });
-  }
 
+
+    ImageView imgView = (ImageView) findViewById(R.id.image);
+    imgView.setImageResource(R.drawable.ninja_drop);
+  }
 
   @Override
   public void onBackPressed() {
