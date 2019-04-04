@@ -7,14 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import edu.cnm.deepdive.project_titan.R;
 
-public class Fragment2 extends Fragment {
+public class ARFragment extends Fragment {
 
   public static final String BODY_TEXT_KEY = "body_text";
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.fragment_fragment2, container, false);
+    View view = inflater.inflate(R.layout.ar_fragment, container, false);
 //    Bundle args = getArguments();
 //    if (args != null) {
 //      String body = args.getString(BODY_TEXT_KEY);
