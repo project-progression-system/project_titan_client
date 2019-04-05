@@ -1,7 +1,23 @@
+/*
+ *  Copyright 2019 Lance Zotigh, Alex Rauenzahn, Thomas Herrera & Deep Dive Coding
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
 package edu.cnm.deepdive.project_titan;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,9 +28,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
-import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
 import edu.cnm.deepdive.project_titan.fragments.ARFragment;
+import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
 import edu.cnm.deepdive.project_titan.fragments.Fragment3;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
@@ -148,9 +169,9 @@ public class MainActivity extends AppCompatActivity
       fragment.setArguments(args);
     }
     manager.beginTransaction()
-        .add(container, fragment, tag)
-        .addToBackStack(fragment.getClass().getSimpleName())
-        .commit(); // tag can be specified null and then it will be
+        .replace(container, fragment, tag)
+//        .addToBackStack(fragment.getClass().getSimpleName())
+        .commitNow(); // tag can be specified null and then it will be
   }
 
 
