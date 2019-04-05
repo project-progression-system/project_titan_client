@@ -27,6 +27,7 @@
  + [Room](https://developer.android.com/topic/libraries/architecture/room)
  + [Play Services Plus](https://developers.google.com/android/guides/releases)
  + [Deep Dive Android Utilities](https://github.com/deep-dive-coding-java/android-utilities/blob/master/README.md)
+ + [AR Core](https://developers.google.com/ar/reference/)
 
 # Potential Improvements
 ### Stretch Goals(simplest to hardest)
@@ -49,6 +50,9 @@ Licensed under the Apache License, Version 2.0 (the “License”); you may not 
  + [Link to the Apache License](http://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+# Additional Licenses
++ [Creative Commons License](https://creativecommons.org/licenses/by/3.0/legalcode)
 
 # Instructions
  + [Build Instructions]() do something with this
