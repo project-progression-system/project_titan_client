@@ -28,6 +28,9 @@
  + [Play Services Plus](https://developers.google.com/android/guides/releases)
  + [Deep Dive Android Utilities](https://github.com/deep-dive-coding-java/android-utilities/blob/master/README.md)
  + [AR Core](https://developers.google.com/ar/reference/)
+ 
+ # External Services
+ + [Google Sign-in](https://developers.google.com/identity/sign-in/android/start-integrating)
 
 # Potential Improvements
 ### Stretch Goals(simplest to hardest)
