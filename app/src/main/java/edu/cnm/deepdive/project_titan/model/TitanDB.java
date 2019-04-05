@@ -19,11 +19,11 @@ import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import edu.cnm.deepdive.project_titan.TitanApplication;
-import edu.cnm.deepdive.project_titan.model.entity.Achievements;
-import edu.cnm.deepdive.project_titan.model.entity.UserInfo;
+import edu.cnm.deepdive.project_titan.model.entity.CompletedAssignments;
+import edu.cnm.deepdive.project_titan.model.entity.User;
 
 @Database(
-    entities = {Achievements.class, UserInfo.class},
+    entities = {CompletedAssignments.class, User.class},
     version = 1,
     exportSchema = true
 )

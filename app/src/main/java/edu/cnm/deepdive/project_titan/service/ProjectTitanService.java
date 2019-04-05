@@ -19,7 +19,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.TitanApplication;
-import edu.cnm.deepdive.project_titan.model.entity.Achievements;
+import edu.cnm.deepdive.project_titan.model.entity.CompletedAssignments;
 import java.io.IOException;
 import retrofit2.Call;
 import retrofit2.Response;
@@ -29,45 +29,45 @@ import retrofit2.http.GET;
 
 public interface ProjectTitanService {
 
-    @GET("quotes/random")
-    Call<Achievements> get();
+  @GET("quotes/random")
+  Call<CompletedAssignments> get();
 
-    class InstanceHolder {
+  class InstanceHolder {
 
-      private static final ProjectTitanService INSTANCE;
+    private static final ProjectTitanService INSTANCE;
 
-      static {
-        TitanApplication application = TitanApplication.getInstance();
-        Gson gson = new GsonBuilder()
-            .excludeFieldsWithoutExposeAnnotation()
-            .create();
-        Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl(application.getApplicationContext().getString(R.string.base_url))
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .build();
-        INSTANCE = retrofit.create(ProjectTitanService.class);
-      }
-
+    static {
+      TitanApplication application = TitanApplication.getInstance();
+      Gson gson = new GsonBuilder()
+          .excludeFieldsWithoutExposeAnnotation()
+          .create();
+      Retrofit retrofit = new Retrofit.Builder()
+          .baseUrl(application.getApplicationContext().getString(R.string.base_url))
+          .addConverterFactory(GsonConverterFactory.create(gson))
+          .build();
+      INSTANCE = retrofit.create(ProjectTitanService.class);
     }
-
-    class GetAcheivmentTask extends BaseFluentAsyncTask<Void, Void, Achievements, Achievements> {
-
-      private Achievements achievement;
-
-      @Override
-      protected Achievements perform(Void... voids) throws TaskException {
-        try {
-          Response<Achievements> response = InstanceHolder.INSTANCE.get().execute();
-          if (!response.isSuccessful()) {
-            throw new TaskException();
-          }
-          return response.body();
-        } catch (IOException e) {
-          throw new RuntimeException(e);
-        }
-      }
-
-    }
-
 
   }
+
+  class GetAcheivmentTask extends BaseFluentAsyncTask<Void, Void, CompletedAssignments, CompletedAssignments> {
+
+    private CompletedAssignments completedAssignments;
+
+    @Override
+    protected CompletedAssignments perform(Void... voids) throws TaskException {
+      try {
+        Response<CompletedAssignments> response = InstanceHolder.INSTANCE.get().execute();
+        if (!response.isSuccessful()) {
+          throw new TaskException();
+        }
+        return response.body();
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+  }
+
+
+}

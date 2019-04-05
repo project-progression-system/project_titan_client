@@ -15,6 +15,11 @@
  */
 package edu.cnm.deepdive.project_titan.fragments;
 
+/*
+  @authors Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,7 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import edu.cnm.deepdive.project_titan.R;
 
-public class Fragment3 extends Fragment {
+public class MainScreenFragment extends Fragment {
 
   public static final String BODY_TEXT_KEY = "body_text";
 

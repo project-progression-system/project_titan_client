@@ -21,8 +21,13 @@ import android.arch.persistence.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * @authors Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
+
 @Entity
-public class UserInfo {
+public class User {
 
   @ColumnInfo(name = "user_id")
   @PrimaryKey(autoGenerate =  true)

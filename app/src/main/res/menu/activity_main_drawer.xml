@@ -4,20 +4,21 @@
   tools:showIn="navigation_view">
 
   <group android:checkableBehavior="single">
+
     <item
-      android:id="@+id/fragment_1"
+      android:id="@+id/main_screen_fragment"
+      android:icon="@drawable/ic_menu_manage"
+      android:title="Main Screen Fragment"/>
+    <item
+      android:id="@+id/achievements_fragment"
       android:icon="@drawable/ic_assessment"
       android:title="Achievements"/>
 
     <item
-      android:id="@+id/fragment_2"
+      android:id="@+id/ar_model_fragment"
       android:icon="@drawable/ic_menu_camera"
       android:title="AR Model"/>
 
-    <item
-      android:id="@+id/fragment_3"
-      android:icon="@drawable/ic_menu_manage"
-      android:title="Extra Fragment If Needed"/>
 
   </group>
 
