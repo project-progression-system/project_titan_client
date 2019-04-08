@@ -26,13 +26,19 @@ import com.google.gson.GsonBuilder;
 import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.TitanApplication;
 import edu.cnm.deepdive.project_titan.model.entity.Assignment;
+import java.io.IOException;
+import java.util.List;
+import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
 
 public interface ProjectTitanService {
 
-//    @GET("completions/assignments")
-//    Call<Achievements> get();
+    @GET("completions")
+    Call <List<Assignment>> get(@Header("Authorization")String authorization);
 
   class InstanceHolder {
 
@@ -52,23 +58,25 @@ public interface ProjectTitanService {
 
   }
 
-  class GetAcheivmentTask extends
-      BaseFluentAsyncTask<Void, Void, Assignment, Assignment> {
+  class GetAchievementTask extends
+      BaseFluentAsyncTask<Void, Void, List<Assignment>, List<Assignment>> {
 
     private Assignment assignment;
 
-//    @Override
-//    protected Assignment perform(Void... voids) throws TaskException {
-//      try {
-//        Response<Assignment> response = InstanceHolder.INSTANCE.get().execute();
-//        if (!response.isSuccessful()) {
-//          throw new TaskException();
-//        }
-//        return response.body();
-//      } catch (IOException e) {
-//        throw new RuntimeException(e);
-//      }
-//    }
+    @Override
+    protected List<Assignment> perform(Void... voids) throws TaskException {
+      try {
+        String token = TitanApplication.getInstance().getString(R.string.authorization_value_format,
+            GoogleSignInService.getInstance().getAccount().getIdToken());
+        Response<List<Assignment>> response = InstanceHolder.INSTANCE.get(token).execute();
+        if (!response.isSuccessful()) {
+          throw new TaskException();
+        }
+        return response.body();
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
 
   }
 

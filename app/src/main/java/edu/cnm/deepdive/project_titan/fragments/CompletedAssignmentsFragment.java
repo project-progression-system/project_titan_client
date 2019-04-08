@@ -25,22 +25,47 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import edu.cnm.deepdive.project_titan.R;
+import edu.cnm.deepdive.project_titan.model.entity.Assignment;
+import edu.cnm.deepdive.project_titan.service.BaseFluentAsyncTask.ResultListener;
+import edu.cnm.deepdive.project_titan.service.ProjectTitanService.GetAchievementTask;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class CompletedAssignmentsFragment extends Fragment {
 
+  private List<Assignment> assignments;
+
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.completed_assignments_fragment, container, false);
-
+    assignments = new ArrayList<>();
     ListView listView = view.findViewById(R.id.completed_list);
+    ArrayAdapter<Assignment> adapter = new ArrayAdapter<>(
+        CompletedAssignmentsFragment.this.getContext(),
+        android.R.layout.simple_list_item_1,
+        assignments);
+    listView.setAdapter(adapter);
 
+    new GetAchievementTask()
+        .setSuccessListener(new ResultListener<List<Assignment>>() {
+          @Override
+          public void handle(List<Assignment> assignments) {
+            CompletedAssignmentsFragment.this.assignments.clear();
+            CompletedAssignmentsFragment.this.assignments.addAll(assignments);
+            adapter.notifyDataSetChanged();
+          }
+        })
+        .execute();
     return view;
   }
 
+
 }
+

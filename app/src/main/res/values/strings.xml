@@ -33,7 +33,8 @@
   <string name="login_failure_message">Unable to sign in with provided credentials</string>
   <string name="sign_out">Sign out</string>
 
-  <string name="base_url">http://10.0.2.2:8080/rest/titan/</string>
+  <string name="base_url">http://10.46.2.132:8080/rest/titan/</string>
+  <string name="authorization_value_format">Bearer %s</string>
   <string name="start_progress">Start Progress</string>
   <string name="action_notification">Action Notification</string>
   <string name="ninja_drop_av_name">Ninja Drop</string> <!-- TODO put a url to make a request from server  -->
