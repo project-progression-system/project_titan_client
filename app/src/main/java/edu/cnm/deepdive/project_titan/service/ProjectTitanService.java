@@ -12,12 +12,14 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- */
-package edu.cnm.deepdive.project_titan.service;
-/**
- * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ *
  * @version 1.0
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  */
+
+
+package edu.cnm.deepdive.project_titan.service;
+
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

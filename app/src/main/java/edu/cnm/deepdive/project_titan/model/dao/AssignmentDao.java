@@ -12,7 +12,12 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *
+ * @version 1.0
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  */
+
+
 package edu.cnm.deepdive.project_titan.model.dao;
 
 
@@ -21,12 +26,6 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import edu.cnm.deepdive.project_titan.model.entity.Assignment;
 import java.util.List;
-
-
-/**
- * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
- * @version 1.0
- */
 
 
 /**

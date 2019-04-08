@@ -12,7 +12,12 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *
+ * @version 1.0
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  */
+
+
 package edu.cnm.deepdive.project_titan.model;
 
 
@@ -25,11 +30,6 @@ import edu.cnm.deepdive.project_titan.TitanApplication;
 import edu.cnm.deepdive.project_titan.model.TitanDB.Converters;
 import edu.cnm.deepdive.project_titan.model.entity.Assignment;
 import edu.cnm.deepdive.project_titan.model.entity.User;
-
-/**
- * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
- * @version 1.0
- */
 
 /**
  * Defines the local database as a collections of its entities and converters. With the

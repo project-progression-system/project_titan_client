@@ -12,7 +12,12 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *
+ * @version 1.0
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  */
+
+
 package edu.cnm.deepdive.project_titan;
 
 import android.content.Intent;
@@ -34,11 +39,11 @@ import edu.cnm.deepdive.project_titan.fragments.NinjaFragment;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
 
-/*
-  @authors Thomas Herrera, Alex Rauenzahn, Lance Zotigh
- * @version 1.0
- */
 
+
+/**
+ * {@link MainActivity} references and organizes {@link Fragment} for the entire app. Utilizes an {@link NavigationView} and a OnNavigationSelectedListener.
+ */
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity
 
 
   }
+
 
   @Override
   public void onBackPressed() {
@@ -122,6 +128,14 @@ public class MainActivity extends AppCompatActivity
     return true;
   }
 
+  /**
+   * Method will load a {@link Fragment}, utilizing {@link FragmentManager} and load the fragments. Additionally, it will ensure the app will always have a {@link Fragment} loaded.
+   *
+   * @param fragment takes a {@link Fragment}
+   * @param container uses a container to keep {@link Fragment} in order.
+   * @param tag Is the name associated with a specific {@link Fragment}.
+   * @param args Uses a {@link Bundle} to keep {@link Fragment} in order for the backstack.
+   */
   public void loadFragment(Fragment fragment, int container, String tag, Bundle args) {
     FragmentManager manager = getSupportFragmentManager();
     if (args != null) {
@@ -133,9 +147,7 @@ public class MainActivity extends AppCompatActivity
         .commitNow(); // tag can be specified null and then it will be
   }
 
-  /**
-   * This method s
-   */
+
   private void signOut() {
     GoogleSignInService.getInstance().getClient().signOut()
         .addOnCompleteListener(this, (task -> {

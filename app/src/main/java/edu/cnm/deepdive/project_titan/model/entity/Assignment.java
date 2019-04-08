@@ -12,6 +12,9 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *
+ * @version 1.0
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  */
 
 
@@ -23,11 +26,6 @@ import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 import com.google.gson.annotations.Expose;
-
-/**
- * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
- * @version 1.0
- */
 
 
 /**

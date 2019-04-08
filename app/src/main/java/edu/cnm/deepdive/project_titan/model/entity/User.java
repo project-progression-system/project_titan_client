@@ -12,7 +12,12 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *
+ * @version 1.0
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  */
+
+
 package edu.cnm.deepdive.project_titan.model.entity;
 
 import android.arch.persistence.room.ColumnInfo;
@@ -20,11 +25,6 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-/**
- * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
- * @version 1.0
- */
 
 
 /**
@@ -86,8 +86,6 @@ public class User {
 
   /**
    * Sets the name
-   *
-   * @param name
    */
   public void setName(String name) {
     this.name = name;
@@ -104,8 +102,6 @@ public class User {
 
   /**
    * Sets the author
-   *
-   * @param author
    */
   public void setAuthor(String author) {
     this.author = author;
@@ -131,8 +127,6 @@ public class User {
 
   /**
    * Sets the subject.
-   *
-   * @param subject
    */
   public void setSubject(String subject) {
     this.subject = subject;
@@ -140,8 +134,6 @@ public class User {
 
   /**
    * Sets the type.
-   *
-   * @param type
    */
   public void setType(Type type) {
     this.type = type;

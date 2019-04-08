@@ -12,7 +12,12 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *
+ * @version 1.0
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  */
+
+
 package edu.cnm.deepdive.project_titan.controller;
 
 import android.content.Intent;
@@ -29,10 +34,6 @@ import edu.cnm.deepdive.project_titan.MainActivity;
 import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
-/**
- * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
- * @version 1.0
- */
 
 public class LoginActivity extends AppCompatActivity {
 
