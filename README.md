@@ -34,9 +34,17 @@
 
 # Potential Improvements
 ### Stretch Goals(simplest to hardest)
-*
+* Add "Teacher" functionality to the app.
+* Create "Teacher" app that allows inserts, and modifications to assignments to allow "Student" app to complete assignments and earn rewards.
+* Allow "Teacher" to assign "Student" into a group or classroom for easy assignment.
+* Add more models/rewards for Augmented Reality.
+* Add functionality to choose a model/reward as the profile avatar.
+* Add proper lootbox rewards with random rng loot.
+* Add games on "Student" side so they can interact with their avatars.
+
 ### Aesthetics
-*
+* Design a common aesthetic that is unique and clean.
+* Create custom icons for the various actions in the app.
 
 # Design & technical documentation
  + [WireFrames](TeamCapstoneProjectWireFrame.pdf)
