@@ -33,8 +33,8 @@ import retrofit2.http.GET;
 
 public interface ProjectTitanService {
 
-  @GET("quotes/random")
-  Call<Assignment> get();
+    @GET("completions/assignments")
+    Call<Achievements> get();
 
   class InstanceHolder {
 

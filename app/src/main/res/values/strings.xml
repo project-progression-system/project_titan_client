@@ -7,7 +7,7 @@
   <string name="nav_header_desc">Navigation header</string>
   <string name="action_settings">Settings</string>
   <string name="project_titan">Project Titan</string>
-  <string name="client_id">402327872872-g339tcgfotjhuomduobkovo7vbushd80.apps.googleusercontent.com</string>
+  <string name="client_id">1016375693759-74rg82s9pk54vefn20hc3fht56m3n7rk.apps.googleusercontent.com</string>
 
   <string name="drawer_open">Open navigation drawer</string>
   <string name="drawer_close">Close navigation drawer</string>
@@ -33,7 +33,7 @@
   <string name="login_failure_message">Unable to sign in with provided credentials</string>
   <string name="sign_out">Sign out</string>
 
-  <string name="base_url"></string>
+  <string name="base_url">http://10.0.2.2:8080/rest/titan/</string>
   <string name="start_progress">Start Progress</string>
   <string name="action_notification">Action Notification</string> <!-- TODO put a url to make a request from server  -->
 </resources>
