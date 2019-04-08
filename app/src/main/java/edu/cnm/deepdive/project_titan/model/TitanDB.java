@@ -59,7 +59,7 @@ public abstract class TitanDB extends RoomDatabase {
     }
 
     @TypeConverter
-    public static String userTypeToString (User.Type type) {
+    public static String userTypeToString(User.Type type) {
 
       return type.toString();
     }

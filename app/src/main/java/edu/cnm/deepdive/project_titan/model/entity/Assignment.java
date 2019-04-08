@@ -16,6 +16,8 @@ import com.google.gson.annotations.Expose;
     parentColumns = "user_id", childColumns = "id",
     onDelete = ForeignKey.CASCADE
 ))
+
+
 public class Assignment {
 
   @PrimaryKey
@@ -43,8 +45,6 @@ public class Assignment {
   @Expose
   @ColumnInfo(name = "user_id")
   private Long userId;
-
-
 
 
   @NonNull
@@ -91,15 +91,6 @@ public class Assignment {
   public void setUserId(@NonNull Long userId) {
     this.userId = userId;
   }
-
-//  @NonNull
-//  public Type getType() {
-//    return type;
-//  }
-//
-//  public void setType(@NonNull Type type) {
-//    this.type = type;
-//  }
 
 
 }

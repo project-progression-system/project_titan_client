@@ -24,17 +24,13 @@ import com.google.gson.GsonBuilder;
 import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.TitanApplication;
 import edu.cnm.deepdive.project_titan.model.entity.Assignment;
-import java.io.IOException;
-import retrofit2.Call;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
 
 public interface ProjectTitanService {
 
-    @GET("completions/assignments")
-    Call<Achievements> get();
+//    @GET("completions/assignments")
+//    Call<Achievements> get();
 
   class InstanceHolder {
 
@@ -59,18 +55,18 @@ public interface ProjectTitanService {
 
     private Assignment assignment;
 
-    @Override
-    protected Assignment perform(Void... voids) throws TaskException {
-      try {
-        Response<Assignment> response = InstanceHolder.INSTANCE.get().execute();
-        if (!response.isSuccessful()) {
-          throw new TaskException();
-        }
-        return response.body();
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
+//    @Override
+//    protected Assignment perform(Void... voids) throws TaskException {
+//      try {
+//        Response<Assignment> response = InstanceHolder.INSTANCE.get().execute();
+//        if (!response.isSuccessful()) {
+//          throw new TaskException();
+//        }
+//        return response.body();
+//      } catch (IOException e) {
+//        throw new RuntimeException(e);
+//      }
+//    }
 
   }
 
