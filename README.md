@@ -61,7 +61,7 @@
 
 # Using the App Instructions
 
-+ [How to use the app]()
++ [How to use the app](AppUserInstructions.md)
 
 
 # Copyrights and Licenses
