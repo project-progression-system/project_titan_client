@@ -143,8 +143,8 @@ public class MainActivity extends AppCompatActivity
     }
     manager.beginTransaction()
         .replace(container, fragment, tag)
-//        .addToBackStack(fragment.getClass().getSimpleName())
-        .commitNow(); // tag can be specified null and then it will be
+        .addToBackStack(fragment.getClass().getSimpleName())
+        .commit(); // tag can be specified null and then it will be
   }
 
 
