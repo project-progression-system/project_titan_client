@@ -54,6 +54,10 @@
  + [ERD](docs/FrontEndForProjectTitan.pdf)
  + [DDL]() do something with this
  + [Javadoc]() do something with this
+ 
+# Build Instructions
+
++ [How to build](BuildInstructions.md)
 
 
 # Copyrights and Licenses
