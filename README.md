@@ -50,7 +50,7 @@
 
 # Design & technical documentation
  + [WireFrames](TeamCapstoneProjectWireFrame.pdf)
- + [User Stories]() do something with this
+ + [User Stories](docs/UserStories.md) do something with this
  + [ERD](docs/FrontEndForProjectTitan.pdf)
  + [DDL](docs/ddl.md)
  + [Javadoc]() do something with this
