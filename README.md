@@ -52,7 +52,7 @@
  + [WireFrames](TeamCapstoneProjectWireFrame.pdf)
  + [User Stories]() do something with this
  + [ERD](docs/FrontEndForProjectTitan.pdf)
- + [DDL]() do something with this
+ + [DDL](docs/ddl.md) do something with this
  + [Javadoc]() do something with this
  
 # Build Instructions
