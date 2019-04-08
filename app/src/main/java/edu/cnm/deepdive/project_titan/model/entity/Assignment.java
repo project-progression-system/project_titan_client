@@ -163,5 +163,8 @@ public class Assignment {
     this.userId = userId;
   }
 
-
+  @Override
+  public String toString() {
+    return "assignment: " + name + " points: " + points;
+  }
 }
