@@ -10,14 +10,14 @@
       android:icon="@drawable/ic_menu_manage"
       android:title="Main Screen Fragment"/>
     <item
-      android:id="@+id/achievements_fragment"
-      android:icon="@drawable/ic_assessment"
-      android:title="Achievements"/>
-
-    <item
       android:id="@+id/ar_model_fragment"
       android:icon="@drawable/ic_menu_camera"
       android:title="AR Model"/>
+    <item
+      android:id="@+id/completed_assignments_fragments"
+      android:icon="@drawable/ic_assessment"
+      android:title="Completed Assignments"/>
+
 
 
   </group>

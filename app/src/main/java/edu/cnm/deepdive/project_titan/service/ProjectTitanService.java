@@ -14,12 +14,16 @@
  *  limitations under the License.
  */
 package edu.cnm.deepdive.project_titan.service;
+/**
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.TitanApplication;
-import edu.cnm.deepdive.project_titan.model.entity.CompletedAssignments;
+import edu.cnm.deepdive.project_titan.model.entity.Assignment;
 import java.io.IOException;
 import retrofit2.Call;
 import retrofit2.Response;
@@ -30,7 +34,7 @@ import retrofit2.http.GET;
 public interface ProjectTitanService {
 
   @GET("quotes/random")
-  Call<CompletedAssignments> get();
+  Call<Assignment> get();
 
   class InstanceHolder {
 
@@ -50,14 +54,15 @@ public interface ProjectTitanService {
 
   }
 
-  class GetAcheivmentTask extends BaseFluentAsyncTask<Void, Void, CompletedAssignments, CompletedAssignments> {
+  class GetAcheivmentTask extends
+      BaseFluentAsyncTask<Void, Void, Assignment, Assignment> {
 
-    private CompletedAssignments completedAssignments;
+    private Assignment assignment;
 
     @Override
-    protected CompletedAssignments perform(Void... voids) throws TaskException {
+    protected Assignment perform(Void... voids) throws TaskException {
       try {
-        Response<CompletedAssignments> response = InstanceHolder.INSTANCE.get().execute();
+        Response<Assignment> response = InstanceHolder.INSTANCE.get().execute();
         if (!response.isSuccessful()) {
           throw new TaskException();
         }

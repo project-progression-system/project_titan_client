@@ -4,14 +4,12 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="#800000"
-  tools:context="edu.cnm.deepdive.project_titan.fragments.AchievementsFragment">
+  tools:context="edu.cnm.deepdive.project_titan.fragments.CompletedAssignmentsFragment">
 
   <!-- TODO: Update blank fragment layout -->
-  <TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:textColor="#FF0000"
-    android:textSize="72sp"
-    android:text="@string/hello_blank_fragment"/>
+  <ListView
+    android:id="@+id/completed_list"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"/>
 
 </FrameLayout>

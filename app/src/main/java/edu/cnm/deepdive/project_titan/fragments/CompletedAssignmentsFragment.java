@@ -26,14 +26,14 @@ import edu.cnm.deepdive.project_titan.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AchievementsFragment extends Fragment {
+public class CompletedAssignmentsFragment extends Fragment {
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.achievements_fragment, container, false);
+    View view = inflater.inflate(R.layout.completed_assignments_fragment, container, false);
 
-    ListView listView = view.findViewById(R.id.achievement_list);
+    ListView listView = view.findViewById(R.id.completed_list);
 
     return view;
   }

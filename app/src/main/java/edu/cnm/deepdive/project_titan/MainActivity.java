@@ -17,7 +17,6 @@ package edu.cnm.deepdive.project_titan;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -28,11 +27,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
-import edu.cnm.deepdive.project_titan.fragments.AchievementsFragment;
+import edu.cnm.deepdive.project_titan.fragments.CompletedAssignmentsFragment;
 import edu.cnm.deepdive.project_titan.fragments.MainScreenFragment;
 import edu.cnm.deepdive.project_titan.fragments.NinjaFragment;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
@@ -45,11 +41,6 @@ import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
-
-  ProgressBar progressBar;
-  private int i = 0;
-  private TextView progressTextView;
-  private Handler handler = new Handler();
 
 
   @Override
@@ -68,15 +59,10 @@ public class MainActivity extends AppCompatActivity
     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
     navigationView.setNavigationItemSelectedListener(this);
 
-
     if (savedInstanceState == null) {
       getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
           new MainScreenFragment()).commit();
     }
-    progressBar = (ProgressBar) findViewById(R.id.determinateBar);
-
-    ImageView imgView = (ImageView) findViewById(R.id.image);
-    imgView.setImageResource(R.drawable.ninja_drop);
 
 
   }
@@ -102,7 +88,6 @@ public class MainActivity extends AppCompatActivity
 
     int id = item.getItemId();
 
-
     boolean handled = true;
     switch (item.getItemId()) {
       case R.id.sign_out:
@@ -119,15 +104,15 @@ public class MainActivity extends AppCompatActivity
     Bundle args = new Bundle();
     switch (item.getItemId()) {
       case R.id.main_screen_fragment:
-        loadFragment(new AchievementsFragment(), R.id.fragment_container, "main screen fragment",
-            null);// this refers to the method at the very bottom
-        break;
-      case R.id.achievements_fragment:
-        loadFragment(new NinjaFragment(), R.id.fragment_container, "AR Fragment",
+        loadFragment(new MainScreenFragment(), R.id.fragment_container, "main screen fragment",
             null);// this refers to the method at the very bottom
         break;
       case R.id.ar_model_fragment:
-        loadFragment(new MainScreenFragment(), R.id.fragment_container, "fragment3",
+        loadFragment(new NinjaFragment(), R.id.fragment_container, "AR Fragment",
+            null);// this refers to the method at the very bottom
+        break;
+      case R.id.completed_assignments_fragments:
+        loadFragment(new CompletedAssignmentsFragment(), R.id.fragment_container, "fragment3",
             null);// this refers to the method at the very bottom
         break;
     }
@@ -148,7 +133,9 @@ public class MainActivity extends AppCompatActivity
         .commitNow(); // tag can be specified null and then it will be
   }
 
-
+  /**
+   * This method s
+   */
   private void signOut() {
     GoogleSignInService.getInstance().getClient().signOut()
         .addOnCompleteListener(this, (task -> {

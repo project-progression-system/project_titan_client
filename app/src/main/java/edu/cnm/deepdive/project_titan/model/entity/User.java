@@ -22,7 +22,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * @authors Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  * @version 1.0
  */
 
@@ -30,24 +30,22 @@ import com.google.gson.annotations.SerializedName;
 public class User {
 
   @ColumnInfo(name = "user_id")
-  @PrimaryKey(autoGenerate =  true)
+  @PrimaryKey(autoGenerate = true)
   private long id;
 
   @Expose
-  @SerializedName("user_name")
-  private String userName;
+  @SerializedName("name")
+  private String name;
 
   @Expose
-  @SerializedName("first_name")
-  private String FN;
+  @SerializedName("author")
+  private String author;
 
   @Expose
-  @SerializedName("last_name")
-  private String LN;
+  @ColumnInfo(index = true)
+  private Type type;
 
-  @Expose
-  @SerializedName("a_r_image")
-  private String ARImage;
+  private String subject;
 
   public long getId() {
     return id;
@@ -57,35 +55,40 @@ public class User {
     this.id = id;
   }
 
-  public String getUserName() {
-    return userName;
+  public String getName() {
+    return name;
   }
 
-  public void setUserName(String userName) {
-    this.userName = userName;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public String getFN() {
-    return FN;
+  public String getAuthor() {
+    return author;
   }
 
-  public void setFN(String FN) {
-    this.FN = FN;
+  public void setAuthor(String author) {
+    this.author = author;
   }
 
-  public String getLN() {
-    return LN;
+  public Type getType() {
+    return type;
   }
 
-  public void setLN(String LN) {
-    this.LN = LN;
+  public String getSubject() {
+    return subject;
   }
 
-  public String getARImage() {
-    return ARImage;
+  public void setSubject(String subject) {
+    this.subject = subject;
   }
 
-  public void setARImage(String ARImage) {
-    this.ARImage = ARImage;
+  public void setType(Type type) {
+    this.type = type;
+  }
+
+  public enum Type {
+    TEACHER,
+    STUDENT
   }
 }

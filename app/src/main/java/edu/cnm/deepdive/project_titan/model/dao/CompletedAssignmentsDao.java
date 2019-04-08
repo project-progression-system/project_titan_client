@@ -16,14 +16,25 @@
 package edu.cnm.deepdive.project_titan.model.dao;
 
 /*
-  @authors Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  * @version 1.0
  */
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.Query;
+import edu.cnm.deepdive.project_titan.model.entity.Assignment;
+import java.util.List;
 
 @Dao
-public interface AccessDao {
+public interface CompletedAssignmentsDao {
+
+
+  @Query("SELECT * FROM Assignment ORDER BY id DESC")
+  List<Assignment> findAll();
+
+  @Insert
+  List<Long> insertPoints(Assignment... completedAssignments);
 
 
 }

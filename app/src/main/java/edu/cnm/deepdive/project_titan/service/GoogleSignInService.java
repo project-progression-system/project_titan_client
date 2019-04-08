@@ -14,6 +14,10 @@
  *  limitations under the License.
  */
 package edu.cnm.deepdive.project_titan.service;
+/*
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;

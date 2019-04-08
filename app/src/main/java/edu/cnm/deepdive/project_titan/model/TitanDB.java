@@ -14,21 +14,27 @@
  *  limitations under the License.
  */
 package edu.cnm.deepdive.project_titan.model;
+/*
+ *@author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
+import android.arch.persistence.room.TypeConverter;
+import android.arch.persistence.room.TypeConverters;
 import edu.cnm.deepdive.project_titan.TitanApplication;
-import edu.cnm.deepdive.project_titan.model.entity.CompletedAssignments;
+import edu.cnm.deepdive.project_titan.model.TitanDB.Converters;
+import edu.cnm.deepdive.project_titan.model.entity.Assignment;
 import edu.cnm.deepdive.project_titan.model.entity.User;
 
 @Database(
-    entities = {CompletedAssignments.class, User.class},
+    entities = {Assignment.class, User.class},
     version = 1,
     exportSchema = true
 )
-
-
+@TypeConverters(Converters.class)
 public abstract class TitanDB extends RoomDatabase {
 
   public static String DB_NAME = "titan_db";
@@ -44,4 +50,22 @@ public abstract class TitanDB extends RoomDatabase {
         .build();
   }
 
+  // example converter for java.util.Date
+  public static class Converters {
+
+    @TypeConverter
+    public static User.Type stringToUserType(String typeString) {
+      return User.Type.valueOf(typeString);
+    }
+
+    @TypeConverter
+    public static String userTypeToString (User.Type type) {
+
+      return type.toString();
+    }
+  }
 }
+
+
+
+

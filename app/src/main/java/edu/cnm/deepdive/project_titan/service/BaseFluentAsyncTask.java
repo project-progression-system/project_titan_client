@@ -14,6 +14,10 @@
  *  limitations under the License.
  */
 package edu.cnm.deepdive.project_titan.service;
+/*
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
 
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
@@ -42,8 +46,8 @@ import android.util.Log;
  * intermediate value; the second takes the intermediate value, performs some additional processing,
  * and produces a result. Simple extensions or uses of {@link BaseFluentAsyncTask} will generally
  * only need to implement the performance phase&mdash;either by overriding {@link #perform(Object[])
- * perform(Params...)}, or by specifying a lambda or instance of an anonymous class in
- * an invocation of {@link #setPerformer(Performer)}.</p>
+ * perform(Params...)}, or by specifying a lambda or instance of an anonymous class in an invocation
+ * of {@link #setPerformer(Performer)}.</p>
  *
  * <p><strong>Important:</strong> If the <code>Intermediate</code> and <code>Result</code> types
  * specified for an instance of this class (or a subclass) are different, then {@link
@@ -69,10 +73,13 @@ public class BaseFluentAsyncTask<Params, Progress, Intermediate, Result>
     extends AsyncTask<Params, Progress, Result> {
 
   private Performer<Params, Intermediate> performer = (params) -> null;
-  private ProgressListener<Progress> progressListener = (values) -> {};
+  private ProgressListener<Progress> progressListener = (values) -> {
+  };
   private Transformer<Intermediate, Result> transformer = (intermediate) -> (Result) intermediate;
-  private ResultListener<Result> successListener = (result) -> {};
-  private ResultListener<Result> failureListener = (result) -> {};
+  private ResultListener<Result> successListener = (result) -> {
+  };
+  private ResultListener<Result> failureListener = (result) -> {
+  };
 
   /**
    * Executes basic processing of asynchronous task. This method will always be invoked on a

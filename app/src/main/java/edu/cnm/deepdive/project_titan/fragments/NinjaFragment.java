@@ -12,7 +12,10 @@
  *  limitations under the License.
  */
 package edu.cnm.deepdive.project_titan.fragments;
-
+/*
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
