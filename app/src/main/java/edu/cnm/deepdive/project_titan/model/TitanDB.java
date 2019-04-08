@@ -14,10 +14,7 @@
  *  limitations under the License.
  */
 package edu.cnm.deepdive.project_titan.model;
-/*
- *@author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
- * @version 1.0
- */
+
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
@@ -30,7 +27,14 @@ import edu.cnm.deepdive.project_titan.model.entity.Assignment;
 import edu.cnm.deepdive.project_titan.model.entity.User;
 
 /**
- * Defines the local database as a collections of its entities and converters. With the implementation of the for the app-wide use of a single connection, and declares methods to retrieve a data-access object or (DAO) for the database entities.
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
+
+/**
+ * Defines the local database as a collections of its entities and converters. With the
+ * implementation of the for the app-wide use of a single connection, and declares methods to
+ * retrieve a data-access object or (DAO) for the database entities.
  */
 @Database(
     entities = {Assignment.class, User.class},
@@ -41,9 +45,10 @@ import edu.cnm.deepdive.project_titan.model.entity.User;
 public abstract class TitanDB extends RoomDatabase {
 
   public static String DB_NAME = "titan_db";
-/**
- *  Returns the single instance of {@link TitanDB} for the current application context.
- */
+
+  /**
+   * Returns the single instance of {@link TitanDB} for the current application context.
+   */
   public synchronized static TitanDB getInstance() {
     return InstanceHolder.INSTANCE;
   }
@@ -56,12 +61,14 @@ public abstract class TitanDB extends RoomDatabase {
   }
 
   /**
-   * Supports conversion operations for persistence of relevant types not natively supported by Room/SQLite.
+   * Supports conversion operations for persistence of relevant types not natively supported by
+   * Room/SQLite.
    */
   public static class Converters {
 
     /**
      * Converts a {@link String} and returns the {@link typeString}
+     *
      * @param string to typeString
      * @return a {@link String} instance
      */
@@ -72,6 +79,7 @@ public abstract class TitanDB extends RoomDatabase {
 
     /**
      * Converts a {@link User.Type}
+     *
      * @param {@User.Type} as a {@link Type}
      * @return a {@link type}
      */

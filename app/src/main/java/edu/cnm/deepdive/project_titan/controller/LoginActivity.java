@@ -29,6 +29,10 @@ import edu.cnm.deepdive.project_titan.MainActivity;
 import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
+/**
+ * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
+ * @version 1.0
+ */
 
 public class LoginActivity extends AppCompatActivity {
 
