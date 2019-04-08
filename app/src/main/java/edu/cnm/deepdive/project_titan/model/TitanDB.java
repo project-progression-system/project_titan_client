@@ -67,21 +67,22 @@ public abstract class TitanDB extends RoomDatabase {
   public static class Converters {
 
     /**
-     * Converts a {@link String} and returns the {@link typeString}
+     * Converts {@link User} to String.
      *
-     * @param string to typeString
-     * @return a {@link String} instance
+     * @param typeString
+     * @return typeString
      */
     @TypeConverter
     public static User.Type stringToUserType(String typeString) {
       return User.Type.valueOf(typeString);
     }
 
+
     /**
-     * Converts a {@link User.Type}
+     * Takes a {@link User} and converts to a String
      *
-     * @param {@User.Type} as a {@link Type}
-     * @return a {@link type}
+     * @param type takes a {@link User}.
+     * @return a String
      */
     @TypeConverter
     public static String userTypeToString(User.Type type) {
