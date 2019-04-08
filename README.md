@@ -50,10 +50,18 @@
 
 # Design & technical documentation
  + [WireFrames](TeamCapstoneProjectWireFrame.pdf)
- + [User Stories]() do something with this
+ + [User Stories](docs/UserStories.md)
  + [ERD](docs/FrontEndForProjectTitan.pdf)
- + [DDL]() do something with this
+ + [DDL](docs/ddl.md)
  + [Javadoc]() do something with this
+ 
+# Build Instructions
+
++ [How to build](BuildInstructions.md)
+
+# Using the App Instructions
+
++ [How to use the app](AppUserInstructions.md)
 
 
 # Copyrights and Licenses
@@ -66,7 +74,3 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 # Additional Licenses
 + [Creative Commons License](https://creativecommons.org/licenses/by/3.0/legalcode)
-
-# Instructions
- + [Build Instructions]() do something with this
- + [Basic User Instructions]() do something with this
