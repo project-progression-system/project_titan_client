@@ -3,7 +3,7 @@
 ### An educational game that implements an AR (augmented reality) progression system integrated into it. ##
 
 # Current State
-* 
+* Currently we have a base implementation of the "Student" side of the project. They are assigned an avatar to show proof of concept. There is also an Augmented Reality fragment that displays their avatar in AR. moreover, the app communicates with a server side database to display a list view of assignments.
 
 # Purpose
 * The main focus point for this project is for teachers to be able to interact, educate, and utilize to help their students' progression throughout the school year. Each child will be able to choose an avatar, in which they will earn equipment, items such as health potions and power-ups, which are earned through completing school completedAssignments. After completing tasks, the teacher will be able to monitor the student's progression and their entire student roster.
@@ -15,7 +15,8 @@
 * Android API 27
 * Nexus 5x Emulator
 * Galaxy Note 9
-* Galaxy Note 10
+* Galaxy S10 API 28
+
 * LGE LG_Q710AL (Android 8.1.0 API 27) LG Stylo 4
 
 # Third Party Libraries
@@ -34,6 +35,7 @@
 
 # Potential Improvements
 ### Stretch Goals(simplest to hardest)
+* Connect the experiance bar to the samurai server so that they match up with epxeriance gained.
 * Add "Teacher" functionality to the app.
 * Create "Teacher" app that allows inserts, and modifications to assignments to allow "Student" app to complete assignments and earn rewards.
 * Allow "Teacher" to assign "Student" into a group or classroom for easy assignment.
