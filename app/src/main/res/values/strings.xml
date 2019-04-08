@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">Project_titan</string>
+  <string name="app_name">Project Titan</string>
   <string name="navigation_drawer_open">Open navigation drawer</string>
   <string name="navigation_drawer_close">Close navigation drawer</string>
   <string name="nav_header_title">Project Titan</string>
@@ -35,5 +35,6 @@
 
   <string name="base_url">http://10.0.2.2:8080/rest/titan/</string>
   <string name="start_progress">Start Progress</string>
-  <string name="action_notification">Action Notification</string> <!-- TODO put a url to make a request from server  -->
+  <string name="action_notification">Action Notification</string>
+  <string name="ninja_drop_av_name">Ninja Drop</string> <!-- TODO put a url to make a request from server  -->
 </resources>
