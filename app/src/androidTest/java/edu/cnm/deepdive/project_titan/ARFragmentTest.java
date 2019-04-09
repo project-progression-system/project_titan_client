@@ -3,9 +3,7 @@ package edu.cnm.deepdive.project_titan;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.contrib.DrawerMatchers.isClosed;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-
 import android.support.test.espresso.contrib.DrawerActions;
 import android.support.test.espresso.contrib.NavigationViewActions;
 import android.support.test.rule.ActivityTestRule;
@@ -20,7 +18,7 @@ import org.junit.runner.RunWith;
  * makes a simple test for the Main Activity
  */
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest {
+public class ARFragmentTest {
 
   @Rule
   public ActivityTestRule<MainActivity> activityRule
@@ -37,10 +35,7 @@ public class MainActivityTest {
 
     // navigates to the completed_assignments_fragment
     onView(withId(R.id.nav_view))
-        .perform(NavigationViewActions.navigateTo(R.id.completed_assignments_fragment));
+        .perform(NavigationViewActions.navigateTo(R.id.ar_model_fragment));
 
-    //Make sure fragment is loaded
-    onView(withId(R.id.assignments_fragment))
-        .check(matches(isDisplayed()));
   }
 }
