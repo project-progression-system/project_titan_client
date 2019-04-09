@@ -36,7 +36,7 @@
 * Opens the nav Drawer
 * Opens the ar fragment
 
-#### MainActivityTest
+#### CompleteAssignmentsTest
 * Opens the nav Drawer
 * Opens the assignment fragment 
 * Makes sure it is loaded
