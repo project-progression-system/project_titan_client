@@ -39,8 +39,6 @@ import edu.cnm.deepdive.project_titan.controller.NinjaFragment;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
 
-
-
 /**
  * {@link MainActivity} references and organizes {@link Fragment} for the entire app. Utilizes an {@link NavigationView} and a OnNavigationSelectedListener.
  */

@@ -1,6 +1,5 @@
 edu.cnm.deepdive.project_titan
 edu.cnm.deepdive.project_titan.controller
-edu.cnm.deepdive.project_titan.fragments
 edu.cnm.deepdive.project_titan.model
 edu.cnm.deepdive.project_titan.model.dao
 edu.cnm.deepdive.project_titan.model.entity
