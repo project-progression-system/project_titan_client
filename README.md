@@ -54,12 +54,12 @@
  + [Glide](https://github.com/bumptech/glide)
  + [Room](https://developer.android.com/topic/libraries/architecture/room)
  + [Play Services Plus](https://developers.google.com/android/guides/releases)
- + [Deep Dive Android Utilities](https://github.com/deep-dive-coding-java/android-utilities/blob/master/README.md)
+ + [Deep Dive Android Utilities](README.md)
  + [AR Core](https://developers.google.com/ar/reference/)
   
 # External Services  
  + [Google Sign-in](https://developers.google.com/identity/sign-in/android/start-integrating)
- + [AR Core](https://github.com/googlecodelabs/sceneform-intro/blob/master/LICENSE)
+ + [AR Core](https://developers.google.com/ar/reference/java/arcore/reference/packages)
  + [Sceneform](https://developers.google.com/ar/develop/java/sceneform/)
 
 # Potential Improvements
