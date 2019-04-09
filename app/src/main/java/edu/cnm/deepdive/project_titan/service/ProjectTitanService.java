@@ -23,10 +23,16 @@ package edu.cnm.deepdive.project_titan.service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParseException;
 import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.TitanApplication;
-import edu.cnm.deepdive.project_titan.model.entity.Assignment;
+import edu.cnm.deepdive.project_titan.model.TitanDB;
+import edu.cnm.deepdive.project_titan.model.entity.Complete;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Response;
@@ -38,7 +44,7 @@ import retrofit2.http.Header;
 public interface ProjectTitanService {
 
     @GET("completions")
-    Call <List<Assignment>> get(@Header("Authorization")String authorization);
+    Call <List<Complete>> get(@Header("Authorization")String authorization);
 
   class InstanceHolder {
 
@@ -48,6 +54,7 @@ public interface ProjectTitanService {
       TitanApplication application = TitanApplication.getInstance();
       Gson gson = new GsonBuilder()
           .excludeFieldsWithoutExposeAnnotation()
+          .registerTypeAdapter(Complete.class, new CompleteDeserializer())
           .create();
       Retrofit retrofit = new Retrofit.Builder()
           .baseUrl(application.getApplicationContext().getString(R.string.base_url))
@@ -59,19 +66,20 @@ public interface ProjectTitanService {
   }
 
   class GetAchievementTask extends
-      BaseFluentAsyncTask<Void, Void, List<Assignment>, List<Assignment>> {
+      BaseFluentAsyncTask<Void, Void, List<Complete>, List<Complete>> {
 
-    private Assignment assignment;
+    private Complete complete;
 
     @Override
-    protected List<Assignment> perform(Void... voids) throws TaskException {
+    protected List<Complete> perform(Void... voids) throws TaskException {
       try {
         String token = TitanApplication.getInstance().getString(R.string.authorization_value_format,
             GoogleSignInService.getInstance().getAccount().getIdToken());
-        Response<List<Assignment>> response = InstanceHolder.INSTANCE.get(token).execute();
+        Response<List<Complete>> response = InstanceHolder.INSTANCE.get(token).execute();
         if (!response.isSuccessful()) {
           throw new TaskException();
         }
+        TitanDB.getInstance().getCompleteDao().insert(response.body());
         return response.body();
       } catch (IOException e) {
         throw new RuntimeException(e);
@@ -80,5 +88,18 @@ public interface ProjectTitanService {
 
   }
 
+  public class CompleteDeserializer implements JsonDeserializer<Complete> {
+
+
+    @Override
+    public Complete deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
+        throws JsonParseException {
+      Complete complete = new Complete();
+      complete.setId(json.getAsJsonObject().get("id").getAsString());
+      complete.setPoints(json.getAsJsonObject().get("points").getAsInt());
+      complete.setAssignmentName(json.getAsJsonObject().get("assignment").getAsJsonObject().get("name").getAsString());
+      return complete;
+    }
+  }
 
 }

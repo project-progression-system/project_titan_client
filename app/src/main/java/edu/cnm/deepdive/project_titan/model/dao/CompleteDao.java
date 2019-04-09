@@ -23,34 +23,35 @@ package edu.cnm.deepdive.project_titan.model.dao;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
-import edu.cnm.deepdive.project_titan.model.entity.Assignment;
+import edu.cnm.deepdive.project_titan.model.entity.Complete;
 import java.util.List;
 
 
 /**
- * Declares basic CRUD operations for {@link Assignment} instances in the local database, using Room annotations.
+ * Declares basic CRUD operations for {@link Complete} instances in the local database, using Room annotations.
  */
 @Dao
-public interface AssignmentDao {
-
+public interface CompleteDao {
 
   /**
-   * Selects all {@link Assignment} in descending order.
+   * Selects all {@link Complete} in descending order.
    *
-   * @return A List of {@link Assignment}.
+   * @return A List of {@link Complete}.
    */
-  @Query("SELECT * FROM Assignment ORDER BY id DESC")
-  List<Assignment> findAll();
+  @Query("SELECT * FROM Complete ORDER BY id DESC")
+  List<Complete> findAll();
 
   /**
-   * Inserts the points for {@link Assignment}.
+   * Inserts the points for {@link Complete}.
    *
-   * @param completedAssignments takes {@link Assignment} and returns them as completed assignments.
+   * @param completedCompletes takes {@link Complete} and returns them as completed assignments.
    * @return a List of long values as completed assignments.
    */
-  @Insert
-  List<Long> insertPoints(Assignment... completedAssignments);
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  List<Long> insert(Complete... completedCompletes);
 
-
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  List<Long> insert(List<Complete> completes);
 }

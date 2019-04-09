@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity
         loadFragment(new NinjaFragment(), R.id.fragment_container, "AR Fragment",
             null);// this refers to the method at the very bottom
         break;
-      case R.id.completed_assignments_fragments:
+      case R.id.completed_assignments_fragment:
         loadFragment(new CompletedAssignmentsFragment(), R.id.fragment_container, "fragment3",
             null);// this refers to the method at the very bottom
         break;

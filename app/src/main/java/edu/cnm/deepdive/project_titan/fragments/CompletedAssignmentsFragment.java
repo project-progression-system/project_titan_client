@@ -28,7 +28,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import edu.cnm.deepdive.project_titan.R;
-import edu.cnm.deepdive.project_titan.model.entity.Assignment;
+import edu.cnm.deepdive.project_titan.model.TitanDB;
+import edu.cnm.deepdive.project_titan.model.entity.Complete;
 import edu.cnm.deepdive.project_titan.service.BaseFluentAsyncTask.ResultListener;
 import edu.cnm.deepdive.project_titan.service.ProjectTitanService.GetAchievementTask;
 import java.util.ArrayList;
@@ -39,26 +40,26 @@ import java.util.List;
  */
 public class CompletedAssignmentsFragment extends Fragment {
 
-  private List<Assignment> assignments;
+  private List<Complete> completes;
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.completed_assignments_fragment, container, false);
-    assignments = new ArrayList<>();
+    completes = new ArrayList<>();
     ListView listView = view.findViewById(R.id.completed_list);
-    ArrayAdapter<Assignment> adapter = new ArrayAdapter<>(
+    ArrayAdapter<Complete> adapter = new ArrayAdapter<>(
         CompletedAssignmentsFragment.this.getContext(),
         android.R.layout.simple_list_item_1,
-        assignments);
+        completes);
     listView.setAdapter(adapter);
 
     new GetAchievementTask()
-        .setSuccessListener(new ResultListener<List<Assignment>>() {
+        .setSuccessListener(new ResultListener<List<Complete>>() {
           @Override
-          public void handle(List<Assignment> assignments) {
-            CompletedAssignmentsFragment.this.assignments.clear();
-            CompletedAssignmentsFragment.this.assignments.addAll(assignments);
+          public void handle(List<Complete> completes) {
+            CompletedAssignmentsFragment.this.completes.clear();
+            CompletedAssignmentsFragment.this.completes.addAll(completes);
             adapter.notifyDataSetChanged();
           }
         })

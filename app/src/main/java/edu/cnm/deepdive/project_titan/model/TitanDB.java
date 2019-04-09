@@ -29,7 +29,8 @@ import android.arch.persistence.room.TypeConverter;
 import android.arch.persistence.room.TypeConverters;
 import edu.cnm.deepdive.project_titan.TitanApplication;
 import edu.cnm.deepdive.project_titan.model.TitanDB.Converters;
-import edu.cnm.deepdive.project_titan.model.entity.Assignment;
+import edu.cnm.deepdive.project_titan.model.dao.CompleteDao;
+import edu.cnm.deepdive.project_titan.model.entity.Complete;
 import edu.cnm.deepdive.project_titan.model.entity.User;
 
 /**
@@ -38,7 +39,7 @@ import edu.cnm.deepdive.project_titan.model.entity.User;
  * retrieve a data-access object or (DAO) for the database entities.
  */
 @Database(
-    entities = {Assignment.class, User.class},
+    entities = {Complete.class, User.class},
     version = 1,
     exportSchema = true
 )
@@ -46,6 +47,8 @@ import edu.cnm.deepdive.project_titan.model.entity.User;
 public abstract class TitanDB extends RoomDatabase {
 
   public static String DB_NAME = "titan_db";
+
+  public abstract CompleteDao getCompleteDao();
 
   /**
    * Returns the single instance of {@link TitanDB} for the current application context.
