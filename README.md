@@ -64,7 +64,7 @@
 
 ### Stretch Goals(simplest to hardest)
 
-* Connect the experiance bar to the samurai server so that they match up with epxeriance gained.
+* Connect the experiance bar to the samurai server so that they match up with experiance gained.
 * Add "Teacher" functionality to the app.
 * Create "Teacher" app that allows inserts, and modifications to assignments to allow "Student" app to complete assignments and earn rewards.
 * Allow "Teacher" to assign "Student" into a group or classroom for easy assignment.
