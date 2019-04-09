@@ -108,3 +108,4 @@ Unless required by applicable law or agreed to in writing, software distributed 
 # Additional Licenses
 + [Creative Commons License](https://creativecommons.org/licenses/by/3.0/legalcode)
 + [Google Sceneform License](https://github.com/googlecodelabs/sceneform-intro/blob/master/LICENSE)
++ [ArCore Disclosure](ARDiscolsure.md)
