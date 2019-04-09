@@ -59,6 +59,8 @@
   
 # External Services  
  + [Google Sign-in](https://developers.google.com/identity/sign-in/android/start-integrating)
+ + [AR Core](https://github.com/googlecodelabs/sceneform-intro/blob/master/LICENSE)
+ + [Sceneform](https://developers.google.com/ar/develop/java/sceneform/)
 
 # Potential Improvements
 
@@ -105,3 +107,4 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 # Additional Licenses
 + [Creative Commons License](https://creativecommons.org/licenses/by/3.0/legalcode)
++ [Google Sceneform License](https://github.com/googlecodelabs/sceneform-intro/blob/master/LICENSE)
