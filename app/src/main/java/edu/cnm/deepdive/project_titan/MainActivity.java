@@ -32,10 +32,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import edu.cnm.deepdive.project_titan.controller.CompletedAssignmentsFragment;
 import edu.cnm.deepdive.project_titan.controller.LoginActivity;
-import edu.cnm.deepdive.project_titan.fragments.CompletedAssignmentsFragment;
-import edu.cnm.deepdive.project_titan.fragments.MainScreenFragment;
-import edu.cnm.deepdive.project_titan.fragments.NinjaFragment;
+import edu.cnm.deepdive.project_titan.controller.MainScreenFragment;
+import edu.cnm.deepdive.project_titan.controller.NinjaFragment;
 import edu.cnm.deepdive.project_titan.service.GoogleSignInService;
 
 

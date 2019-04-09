@@ -5,7 +5,7 @@
   android:layout_height="match_parent"
   android:id="@+id/assignments_fragment"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  tools:context="edu.cnm.deepdive.project_titan.fragments.CompletedAssignmentsFragment">
+  tools:context="edu.cnm.deepdive.project_titan.controller.CompletedAssignmentsFragment">
 
   <!-- TODO: Update blank fragment layout -->
   <ListView

@@ -18,7 +18,7 @@
  */
 
 
-package edu.cnm.deepdive.project_titan.fragments;
+package edu.cnm.deepdive.project_titan.controller;
 
 
 import android.os.Bundle;

@@ -13,7 +13,7 @@
  * @author Thomas Herrera, Alex Rauenzahn, Lance Zotigh
  * @version 1.0
  */
-package edu.cnm.deepdive.project_titan.fragments;
+package edu.cnm.deepdive.project_titan.controller;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
