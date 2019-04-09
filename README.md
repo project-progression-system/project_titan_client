@@ -85,7 +85,7 @@
  + [User Stories](docs/UserStories.md)
  + [ERD](docs/FrontEndForProjectTitan.pdf)
  + [DDL](docs/ddl.md)
- + [Javadoc](doc/api) 
+ + [Javadoc](docs/api) 
  
 # Build Instructions
 
