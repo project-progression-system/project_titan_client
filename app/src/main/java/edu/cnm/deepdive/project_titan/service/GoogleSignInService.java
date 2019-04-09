@@ -29,6 +29,10 @@ import edu.cnm.deepdive.project_titan.R;
 import edu.cnm.deepdive.project_titan.TitanApplication;
 
 
+/**
+ * This service provides all of the {@link GoogleSignInService} allowing our app to utilize this and
+ * all of its functions.
+ */
 public class GoogleSignInService {
 
   private GoogleSignInClient client;
@@ -46,22 +50,47 @@ public class GoogleSignInService {
   }
 
 
+  /**
+   * Gets an instance of {@link GoogleSignIn}.
+   *
+   * @return an instance of {@link GoogleSignIn}.
+   */
   public static GoogleSignInService getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * Gets a client from {@link GoogleSignIn}.
+   *
+   * @return a client.
+   */
   public GoogleSignInClient getClient() {
     return client;
   }
 
+  /**
+   * Sets a client for {@link GoogleSignIn}.
+   *
+   * @param client returns this client from {@link GoogleSignInClient}
+   */
   public void setClient(GoogleSignInClient client) {
     this.client = client;
   }
 
+  /**
+   * Gets client from {@link GoogleSignInAccount}
+   *
+   * @return the {@link GoogleSignInAccount}.
+   */
   public GoogleSignInAccount getAccount() {
     return account;
   }
 
+  /**
+   * Sets account for {@link GoogleSignInAccount}.
+   *
+   * @param account Takes a {@link GoogleSignInAccount} and uses an account to assign it.
+   */
   public void setAccount(GoogleSignInAccount account) {
     this.account = account;
   }
