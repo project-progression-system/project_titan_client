@@ -10,9 +10,10 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *  @authors Thomas Herrera, Alex Rauenzahn, Lance Zotigh @version 1.0
  */
 package edu.cnm.deepdive.project_titan.fragments;
-
+xdzs
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -32,7 +33,6 @@ import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.ux.TransformableNode;
 
 /**
- * @authors Thomas Herrera, Alex Rauenzahn, Lance Zotigh @version 1.0
  *
  * Creates an {@link ArFragment} within {@link NinjaFragment}. This fragment will ask the user for the proper
  * permissions and then launches an augmented reality view that displays the ninja drop mesh. Users are able to
