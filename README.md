@@ -13,6 +13,7 @@
 * If a student is struggling or not completing tasks, the teacher can opt to allow students to complete tasks for extra credit or make-up work. The teacher would be able to have this tangible object to show to their parents during parent-teacher conferences and show off what the student has earned by completing these tasks.  
 
 # Testing
+
 ### Android API Version and Hardware Used ###
 #### Android API 27
 
