@@ -12,12 +12,28 @@
 
 # Testing
 ### Android API Version and Hardware Used ###
-* Android API 27
-* Nexus 5x Emulator
-* Galaxy Note 9
-* Galaxy S10 API 28
-
-* LGE LG_Q710AL (Android 8.1.0 API 27) LG Stylo 4
+#### Android API 27
+* No problems encountered thus far
+#### Nexus 5x Emulator
+* No problems encountered thus far
+#### Galaxy Note 9
+* No problems encountered thus far
+#### Galaxy S10 API 28
+* No problems encountered thus far
+#### LGE LG_Q710AL (Android 8.1.0 API 27) LG Stylo 4
+* Not compadable with the current ARCore Version. 
+### Tests
+#### ARFragment
+* Opens the nav Drawer
+* Opens the ar fragment makes sure it is loaded
+* Makes sure it is loaded
+#### MainActivityTest
+* Opens the nav Drawer
+* Opens the assignment fragment makes sure it is loaded
+* Makes sure it is loaded
+#### SignOutTest
+* opens the toggle tab
+* signs out
 
 # Third Party Libraries
 ### Libraries
