@@ -1,6 +1,6 @@
 # Project Titan #
 
-### An educational game that implements an AR (augmented reality) progression system integrated into it. ##
+### An educational game that implements AR (augmented reality) and a progression system. ##
 
 # Current State
 
