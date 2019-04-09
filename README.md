@@ -27,14 +27,14 @@
 * No problems encountered thus far
 
 #### LGE LG_Q710AL (Android 8.1.0 API 27) LG Stylo 4
-* Not compadable with the current ARCore Version. 
+* Not compadable with the current ARCore Version.
+* Since AR is not working the test for ARFragment Will not work
 
 ### Tests
 
 #### ARFragment
 * Opens the nav Drawer
 * Opens the ar fragment makes sure it is loaded
-* Makes sure it is loaded
 
 #### MainActivityTest
 * Opens the nav Drawer
