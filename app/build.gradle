@@ -25,6 +25,9 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+    testOptions {
+        animationsDisabled = true
+    }
 }
 
 dependencies {
@@ -61,7 +64,7 @@ dependencies {
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     implementation 'com.facebook.stetho:stetho:1.5.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
 
 
     implementation 'org.apache.commons:commons-csv:1.6'

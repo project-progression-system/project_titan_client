@@ -15,7 +15,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * makes a simple test for the Main Activity
+ * makes a simple test for the NinjaFragment
  */
 @RunWith(AndroidJUnit4.class)
 public class ARFragmentTest {
