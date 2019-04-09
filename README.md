@@ -38,7 +38,7 @@
 
 #### MainActivityTest
 * Opens the nav Drawer
-* Opens the assignment fragment makes sure it is loaded
+* Opens the assignment fragment 
 * Makes sure it is loaded
 
 #### SignOutTest
