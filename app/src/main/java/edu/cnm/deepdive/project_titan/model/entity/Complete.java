@@ -160,6 +160,6 @@ public class Complete {
 
   @Override
   public String toString() {
-    return "assignment: " + assignmentName + " points: " + points;
+    return "assignment: " + assignmentName + "              points: " + points;
   }
 }
