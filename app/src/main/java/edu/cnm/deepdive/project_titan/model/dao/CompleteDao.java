@@ -52,6 +52,12 @@ public interface CompleteDao {
   @Insert(onConflict = OnConflictStrategy.REPLACE)
   List<Long> insert(Complete... completedCompletes);
 
+  /**
+   * Replaces {@link Complete}.
+   *
+   * @param completes takes {@link Complete} and returns them as completed assignments.
+   * @return a List of complete values.
+   */
   @Insert(onConflict = OnConflictStrategy.REPLACE)
   List<Long> insert(List<Complete> completes);
 }
