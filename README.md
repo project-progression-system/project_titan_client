@@ -34,7 +34,7 @@
 
 #### ARFragment
 * Opens the nav Drawer
-* Opens the ar fragment makes sure it is loaded
+* Opens the ar fragment
 
 #### MainActivityTest
 * Opens the nav Drawer
