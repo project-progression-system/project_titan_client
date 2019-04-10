@@ -118,3 +118,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 + [Creative Commons License](https://creativecommons.org/licenses/by/3.0/legalcode)
 + [Google Sceneform License](https://github.com/googlecodelabs/sceneform-intro/blob/master/LICENSE)
 + [ArCore Disclosure](ARDiscolsure.md)
++ [Junit4 License](https://junit.org/junit4/license.html)
++ [Gson License](https://github.com/google/gson/blob/master/LICENSE)
++ [Stetho License](https://github.com/facebook/stetho/blob/master/LICENSE)
