@@ -114,10 +114,12 @@ Licensed under the Apache License, Version 2.0 (the “License”); you may not 
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-# Additional Licenses
+# Copyright and License
++ [Discolsures](Discolsures.md)
 + [Creative Commons License](https://creativecommons.org/licenses/by/3.0/legalcode)
 + [Google Sceneform License](https://github.com/googlecodelabs/sceneform-intro/blob/master/LICENSE)
 + [ArCore Disclosure](ARDiscolsure.md)
 + [Junit4 License](https://junit.org/junit4/license.html)
 + [Gson License](https://github.com/google/gson/blob/master/LICENSE)
 + [Stetho License](https://github.com/facebook/stetho/blob/master/LICENSE)
+
