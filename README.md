@@ -6,6 +6,15 @@
 
 * Currently we have a base implementation of the "Student" side of the project. They are assigned an avatar to show proof of concept. There is also an Augmented Reality fragment that displays their avatar in AR. moreover, the app communicates with a server side database to display a list view of assignments.
 
+# Checklist for graded components
+
+* Has navigation between meultiple fragments using the `Navigation Drawer` between the main fragment, AR Fragment and Assignment Fragment.
+* Returns a Json object from the back end  Samurai server.
+* Uses local database with Room and Hibernate.
+* `listview` in the Assignemtn fragment that uses data fromt the back end Samurai server.
+* Google Sign-in, ARcore, upload from a JAR file as consumptions of external sevices.
+* Custom backgrounds on Google Sign-in, and main fragment, and custom icons.
+
 # Purpose
 
 * The main focus point for this project is for teachers to be able to interact, educate, and utilize this app to help their students' progression throughout the school year. Each child will be able to choose an avatar, in which they will earn equipment, items such as health potions and power-ups, which are earned through completing school assignments. After completing tasks, the teacher will be able to monitor the student's progression and their entire student roster.
