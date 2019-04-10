@@ -10,7 +10,7 @@
 
 * Has navigation between meultiple fragments using the `Navigation Drawer` between the main fragment, AR Fragment and Assignment Fragment.
 * Returns a Json object from the back end  Samurai server.
-* Uses local database with Room and Hibernate.
+* Uses local database with Room and Hibernate and saves data from the backend Samurai server into the local database.
 * `listview` in the Assignemtn fragment that uses data fromt the back end Samurai server.
 * Google Sign-in, ARcore, upload from a JAR file as consumptions of external sevices.
 * Custom backgrounds on Google Sign-in, and main fragment, and custom icons.
